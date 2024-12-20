@@ -1,0 +1,27 @@
+{
+  "functions": [
+    {
+      "source": "functions",  // Ensures Firebase uses the 'functions' directory
+      "codebase": "default",  // Default codebase for functions
+      "ignore": [
+        "node_modules",  // Ignore node_modules
+        ".git",           // Ignore git directory
+        "firebase-debug.log", 
+        "firebase-debug.*.log",
+        "*.local"         // Ignore any local files
+      ]
+    }
+  ],
+  "emulators": {
+    "functions": {
+      "port": 5001  // Port for functions emulator
+    },
+    "firestore": {
+      "port": 8080  // Port for Firestore emulator
+    },
+    "ui": {
+      "enabled": true  // Enable the Emulator UI
+    },
+    "singleProjectMode": true  // Useful if you're working with only one project
+  }
+}
